@@ -10,9 +10,12 @@ class PerfectNumbersTest {
 
     @Test
     void testIsPerfectNumber() {
-        assertTrue(new PerfectNumbers().isPerfectNumber(6));
-        assertTrue(new PerfectNumbers().isPerfectNumber(8128));
-        assertFalse(new PerfectNumbers().isPerfectNumber(7246));
-        assertFalse(new PerfectNumbers().isPerfectNumber(9));
+        PerfectNumbers perfectNumbers = new PerfectNumbers();
+
+        assertTrue(perfectNumbers.isPerfectNumber(6));
+        assertTrue(perfectNumbers.isPerfectNumber(8128));
+
+        assertFalse(perfectNumbers.isPerfectNumber(7246));
+        assertFalse(perfectNumbers.isPerfectNumber(9));
     }
 }
