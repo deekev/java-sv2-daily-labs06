@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HangmanMain {
 
     private String wordToFind = "alma";
-    private String wordFound = "____";
+    private String wordFound = "_".repeat(wordToFind.length());
     private int chances = 8;
 
     public static void main(String[] args) {
@@ -14,12 +14,11 @@ public class HangmanMain {
 
     private void run() {
         Scanner scanner = new Scanner(System.in);
-        String guess = "";
         do{
             System.out.println("Itt tartasz: " + wordFound);
             System.out.println("Ennyi tipped van: " + chances);
             System.out.println("Mi a következő tipped?");
-            guess = scanner.nextLine();
+            String guess = scanner.nextLine();
             if (wordToFind.contains(guess)) {
                 wordFound = updateWordFound(wordToFind, wordFound, guess);
             } else {
