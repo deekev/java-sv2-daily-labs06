@@ -1,4 +1,4 @@
-package hangman;
+package day04.hangman;
 
 import java.util.Scanner;
 
